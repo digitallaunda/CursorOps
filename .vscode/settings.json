@@ -1,0 +1,9 @@
+{
+    "editor.fontSize": 20,
+    "workbench.colorTheme": "Quiet Light",
+    "editor.tabSize": 2,
+    "workbench.preferredDarkColorTheme": "Default Light+",
+    "workbench.preferredHighContrastColorTheme": "Default Light+",
+    "workbench.preferredHighContrastLightColorTheme": "Visual Studio Light",
+    "workbench.preferredLightColorTheme": "Visual Studio Light"
+}

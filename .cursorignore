@@ -1,0 +1,20 @@
+# .cursorignore
+
+node_modules/
+pnpm-lock.yaml
+dist/
+coverage/
+.tmp/
+*.log
+.DS_Store
+.vscode/
+.git/
+**/__pycache__/
+**/.terraform/
+**/*.pem
+**/*.key
+secrets/*
+artifacts/
+*.sqlite
+*.db
+

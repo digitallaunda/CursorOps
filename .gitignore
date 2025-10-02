@@ -1,0 +1,17 @@
+node_modules/
+dist/
+coverage/
+.tmp/
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+**/__pycache__/
+**/.terraform/
+**/*.pem
+**/*.key
+secrets/
+artifacts/
+*.sqlite
+*.db

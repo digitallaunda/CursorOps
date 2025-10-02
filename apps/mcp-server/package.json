@@ -1,0 +1,28 @@
+{
+  "name": "@apps/mcp-server",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "node --loader ts-node/esm --watch src/index.ts",
+    "start": "node dist/index.js",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@clients/make": "workspace:*",
+    "@clients/airtable": "workspace:*",
+    "@clients/apify": "workspace:*",
+    "@clients/http": "workspace:*",
+    "zod": "^3.22.4",
+    "pino": "^8.17.2",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "typescript": "^5.3.3",
+    "vitest": "^1.0.4",
+    "ts-node": "^10.9.2"
+  }
+}
+

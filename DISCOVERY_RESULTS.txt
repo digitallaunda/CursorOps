@@ -1,0 +1,93 @@
+═══════════════════════════════════════════════════════════
+         WORKFLOW AUTOMATION DISCOVERY RESULTS
+═══════════════════════════════════════════════════════════
+
+Date: 2025-10-02
+MCP Server: http://localhost:7337
+Status: ✅ Running (RUN_ID: run_1759405888839)
+
+───────────────────────────────────────────────────────────
+📊 AIRTABLE DISCOVERY
+───────────────────────────────────────────────────────────
+✅ Status: Fully operational
+
+Bases Found: 1
+└─ [appiyAPI36T3uCHfj] MZZI_Digital
+   └─ Tables: 1
+      └─ [tbl6v2KQdlDPREoU6] Table 1
+         └─ Contains 3+ records
+
+Commands:
+• List bases:      ./scripts/airtable-list-bases.sh
+• Get schema:      ./scripts/airtable-get-schema.sh  
+• Query records:   ./scripts/airtable-query.sh "Table 1" "" 10
+• Create record:   ./scripts/airtable-create.sh "Table 1" '{"field":"value"}'
+
+───────────────────────────────────────────────────────────
+🔧 MAKE.COM DISCOVERY
+───────────────────────────────────────────────────────────
+⚠️  Status: Permission denied (403)
+
+Issue: Current API token lacks "Scenarios - Read" permission
+Workaround: Manually get scenario IDs from Make.com dashboard
+
+Action Required:
+1. Go to: https://eu2.make.com/organization/XXXXX/api-tokens
+2. Create new token with permissions:
+   - Scenarios: Read, Execute
+   - Organizations: Read
+3. Update .env.local with new token
+
+Current capability:
+• Run scenario:    ./scripts/make-run.sh <SCENARIO_ID> '{}'
+
+───────────────────────────────────────────────────────────
+🕷️  APIFY DISCOVERY
+───────────────────────────────────────────────────────────
+✅ Status: Authenticated, no custom actors yet
+
+Actors Found: 0 custom actors
+Public Store: Available (1000+ actors)
+
+Recommended public actors:
+• apify/web-scraper              - Universal web scraping
+• apify/google-search-scraper    - Google SERP data
+• apify/cheerio-scraper          - Fast HTML parsing
+• apify/puppeteer-scraper        - Full browser automation
+
+Commands:
+• List actors:     ./scripts/apify-list-actors.sh
+• Run store actor: ./scripts/apify-run.sh "apify/web-scraper" '{...}'
+
+───────────────────────────────────────────────────────────
+🌐 HTTP CLIENT
+───────────────────────────────────────────────────────────
+✅ Status: Fully operational
+
+Universal HTTP client for any REST API
+
+Commands:
+• GET request:     ./scripts/http-request.sh GET <URL>
+• POST request:    ./scripts/http-request.sh POST <URL> '{"data":true}'
+
+───────────────────────────────────────────────────────────
+📋 SUMMARY
+───────────────────────────────────────────────────────────
+
+Working Tools:        7 / 10
+├─ Airtable:         4/4 ✅
+├─ Make.com:         1/2 ⚠️ 
+├─ Apify:            2/3 ✅
+└─ HTTP:             1/1 ✅
+
+Next Steps:
+1. ✅ Airtable - Ready to use
+2. ⚠️  Make.com - Update API token permissions
+3. ✅ Apify - Use store actors or create custom ones
+4. ✅ HTTP - Universal, works with any API
+
+Scripts Available:  10
+Config Files:       6
+Documentation:      5 runbooks
+
+═══════════════════════════════════════════════════════════
