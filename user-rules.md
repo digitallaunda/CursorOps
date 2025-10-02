@@ -13,4 +13,5 @@
 - Keep context minimal. Include `claude.md` and import Claude commands when building interactive task flows.  
 - Deliver reproducible workflows: scripts, runbooks, env vars, deployment steps.  
 - Logs, observability, and rollback instructions must be included for every workflow setup.  
+- Do not create unnecessary junk files, which are just reports of prompts or instructions. Only create files if needed for the project as project files, not report or summary files. Delete any such files if they exist. 
 
