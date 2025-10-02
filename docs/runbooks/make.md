@@ -2,6 +2,10 @@
 
 ## Setup
 ```bash
+# Load from .env file
+source .env
+
+# Or set manually
 export MAKE_API_TOKEN=<YOUR_MAKE_API_TOKEN>
 export MAKE_ZONE=<YOUR_MAKE_ZONE>
 export MAKE_TEAM=<YOUR_MAKE_TEAM_ID>

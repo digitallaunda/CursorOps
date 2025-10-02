@@ -2,6 +2,10 @@
 
 ## Setup
 ```bash
+# Load from .env file
+source .env
+
+# Or set manually
 export APIFY_TOKEN=<YOUR_APIFY_API_TOKEN>
 ```
 

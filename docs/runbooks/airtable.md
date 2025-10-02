@@ -2,6 +2,10 @@
 
 ## Setup
 ```bash
+# Load from .env file
+source .env
+
+# Or set manually
 export AIRTABLE_API_KEY=<YOUR_AIRTABLE_PAT>
 export AIRTABLE_BASE_ID=<YOUR_BASE_ID>
 ```
