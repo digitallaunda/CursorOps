@@ -1,0 +1,13 @@
+{
+  "version": "1.0.0",
+  "safetyLevel": "maximum",
+  "autoBackup": true,
+  "dryRunDefault": true,
+  "protectedExtensions": [".js", ".ts", ".jsx", ".tsx", ".py", ".md", ".json"],
+  "junkPatterns": ["*.tmp", "*.log", ".DS_Store", "*.bak"],
+  "excludeDirectories": ["node_modules", ".git"],
+  "buildArtifacts": ["dist", "build"],
+  "duplicateThreshold": "100%",
+  "minFileAgeForLog": 30,
+  "maxFileSize": "100MB"
+}
