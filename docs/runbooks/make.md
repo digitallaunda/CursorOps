@@ -8,7 +8,7 @@ source .env
 # Or set manually
 export MAKE_API_TOKEN=<YOUR_MAKE_API_TOKEN>
 export MAKE_ZONE=<YOUR_MAKE_ZONE>
-export MAKE_TEAM=<YOUR_MAKE_TEAM_ID>
+export MAKE_ORGANIZATION_ID=<YOUR_MAKE_ORG_ID>
 ```
 
 ## Run Scenario
@@ -27,7 +27,7 @@ curl -X POST http://localhost:7337/tools \
 ## List Scenarios
 Query the Make API directly to get scenario IDs:
 ```bash
-curl https://eu2.make.com/api/v2/scenarios \
+curl "https://$MAKE_ZONE/api/v2/scenarios?organizationId=$MAKE_ORGANIZATION_ID" \
   -H "Authorization: Token $MAKE_API_TOKEN"
 ```
 
