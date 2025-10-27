@@ -8,8 +8,13 @@ import { fileURLToPath } from "url";
 import { dirname, resolve } from "path";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const envPath = resolve(__dirname, "../../../.env.local");
+const rootDir = resolve(__dirname, "../../..");
+
+// Load base .env first, then .env.local to allow local overrides
+const envPath = resolve(rootDir, ".env");
+const envLocalPath = resolve(rootDir, ".env.local");
 const envResult = config({ path: envPath });
+const envLocalResult = config({ path: envLocalPath });
 
 const logger = pino({
   name: "mcp-server",
@@ -18,7 +23,16 @@ const logger = pino({
 });
 
 const RUN_ID = process.env.RUN_ID || `run_${Date.now()}`;
-logger.info({ RUN_ID, envPath, envLoaded: !envResult.error }, "MCP server starting");
+logger.info(
+  {
+    RUN_ID,
+    envPath,
+    envLoaded: !envResult.error,
+    envLocalPath,
+    envLocalLoaded: !envLocalResult.error,
+  },
+  "MCP server starting",
+);
 
 // Initialize clients
 const makeClient = process.env.MAKE_API_TOKEN
